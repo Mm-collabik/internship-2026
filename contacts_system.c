@@ -37,6 +37,12 @@ int find_by_id(int id) {
     return -1;
 }
 
+/* 暂停，等待用户按回车继续 */
+void pause() {
+    printf("\n（按回车键返回主菜单...）");
+    clear_buffer();
+}
+
 /* 打印一条联系人信息 */
 void print_one(struct contact *p) {
     printf("%-8d %-10s %-16s %-24s %-24s %-10s\n",
@@ -282,6 +288,7 @@ void list_all() {
     for (i = 0; i < total; i++) {
         print_one(&list[i]);
     }
+    pause();
 }
 
 /* 显示主菜单 */
