@@ -227,6 +227,7 @@ void edit_contact() {
 
     save_data();
     printf("修改成功！\n");
+    pause();
 }
 
 /* 4. 查询联系人 */
@@ -275,6 +276,7 @@ void search_contact() {
     } else {
         printf("输入有误，请选择1或2。\n");
     }
+    pause();
 }
 
 /* 5. 列出全部联系人 */
