@@ -36,6 +36,11 @@ int main()
         for (j = 0; j < M; j++) {
             printf("%s成绩：", kemu[j]);
             scanf("%f", &stu[i].score[j]);
+            /* 成绩范围检查，防止输入错误 */
+            while (stu[i].score[j] < 0 || stu[i].score[j] > 100) {
+                printf("成绩应在0-100之间，请重新输入：");
+                scanf("%f", &stu[i].score[j]);
+            }
         }
         printf("\n");
     }
