@@ -95,6 +95,16 @@ int main()
                kemu[j], stu[best_idx].name, stu[best_idx].id, stu[best_idx].score[j]);
     }
 
+    /* 计算并输出班级各科平均分 */
+    printf("\n===== 班级各科平均分 =====\n");
+    for (j = 0; j < M; j++) {
+        float sum = 0.0;
+        for (i = 0; i < N; i++) {
+            sum += stu[i].score[j];
+        }
+        printf("%s班级平均分：%.1f\n", kemu[j], sum / N);
+    }
+
     printf("\n程序运行结束，感谢使用！\n");
     return 0;
 }
