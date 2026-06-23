@@ -124,6 +124,7 @@ void add_contact() {
     total++;
     save_data();                     /* 自动保存 */
     printf("添加成功！联系人\"%s\"，编号%d\n", c.name, c.id);
+    pause();
 }
 
 /* 2. 删除联系人 */
@@ -159,8 +160,10 @@ void del_contact() {
         }
         total--;
         save_data();
+        pause();
     } else {
         printf("已取消删除。\n");
+        pause();
     }
 }
 
